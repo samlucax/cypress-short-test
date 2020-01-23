@@ -13,15 +13,19 @@ context("Form", () => {
 
   it.only("When I fill the form it should be saved properly", () => {
     fillHaveDependents("No");
-    fillZip("32789");
-    fillConditions(["None of the above"]);
-    fillAgreeDivide("Yes");
-    fillDefaultOptions("Yes");
-    fillEmail();
-    submit();
-    closeAnalysisDialog(false);
-    accessDiagnosticsMenuTab();
-    assertDiagnosticsFormHasBeenCompleted();
+//     fillZip("32789");
+//     fillConditions(["None of the above"]);
+//     fillAgreeDivide("Yes");
+//     fillDefaultOptions("Yes");
+//     fillEmail();
+//     submit();
+//     closeAnalysisDialog(false);
+//     accessDiagnosticsMenuTab();
+//     assertDiagnosticsFormHasBeenCompleted();
+  });
+  
+  it.only("When I do not fill it should not be saved", () => {
+    cy.log("Yeah");
   });
 });
 
