@@ -26,11 +26,11 @@ jobs:
       - run: yarn test
       
       - store_test_results:
-          path: reports
+          path: reports/junit
           
       - store_test_results:
           path: mochawesome-report
           
       - store_artifacts:
-          path: mochawesome-report
-          destination: circleci-docs
+          path: mochawesome-report/unified_report.html
+          destination: reports
