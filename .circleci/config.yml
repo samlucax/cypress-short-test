@@ -26,11 +26,8 @@ jobs:
       - run: yarn test
       
       - store_test_results:
-          path: reports/junit
-          
-      - store_test_results:
-          path: mochawesome-report
+          path: ./cypress/reports/junit
           
       - store_artifacts:
-          path: mochawesome-report/unified_report.html
+          path: ./mochawesome-report/unified_report.html
           destination: reports
