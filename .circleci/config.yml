@@ -24,3 +24,13 @@ jobs:
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
       - run: yarn test
+      
+      - store_test_results:
+          path: reports
+          
+      - store_test_results:
+          path: mochawesome-report
+          
+      - store_artifacts:
+          path: mochawesome-report
+          destination: circleci-docs
