@@ -1,3 +1,7 @@
 {
-    "baseUrl": "https://test.legalatoms.com"
+  "baseUrl": "https://test.legalatoms.com",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }
