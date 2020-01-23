@@ -23,11 +23,12 @@ jobs:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
+            
       - run: yarn test
       
       - store_test_results:
           path: ./cypress/reports/junit
           
       - store_artifacts:
-          path: ./mochawesome-report/unified_report.html
+          path: ./mochawesome-report
           destination: reports
